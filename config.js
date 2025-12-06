@@ -1,15 +1,24 @@
 // Blog Configuration
 const BLOG_CONFIG = {
-    name: "Your Blog Name",
-    description: "A modern, fast, and SEO-optimized blog covering technology, tutorials, and insights.",
-    url: "https://yourblog.com", // Update with your actual domain
-    author: "Your Name",
+    name: "CloudSlate",
+    description: "Empowering developers and tech enthusiasts with cutting-edge insights, practical tutorials, and innovative solutions in cloud computing, web development, and modern technology.",
+    url: "https://cloudslate.com", // Update with your actual domain
+    author: "Muhammad Khuhro",
+    
+    // Contact Information
+    contact: {
+        email: "info.cloudslate@gmail.com",
+        whatsapp: "+923258423208"
+    },
+    
+    // Vision Statement
+    vision: "At CloudSlate, we envision a world where technology knowledge is accessible, practical, and transformative. We're committed to providing high-quality content that bridges the gap between complex technical concepts and real-world applications. Our mission is to empower developers, students, and tech enthusiasts to build innovative solutions, stay ahead of industry trends, and contribute to the ever-evolving digital landscape. Through comprehensive tutorials, insightful articles, and community engagement, we aim to be your trusted companion on your journey to technological excellence.",
     
     // Social Media Links
     social: {
-        twitter: "https://twitter.com/yourhandle",
-        github: "https://github.com/yourhandle",
-        linkedin: "https://linkedin.com/in/yourhandle"
+        twitter: "https://twitter.com/cloudslate",
+        github: "https://github.com/cloudslate",
+        linkedin: "https://linkedin.com/company/cloudslate"
     },
     
     // Google AdSense (replace with your actual ad unit IDs)
@@ -80,7 +89,7 @@ JavaScript brings interactivity to websites and is now used for both frontend an
 ## Conclusion
 
 Web development is a rewarding field with endless possibilities. Start your journey today!`,
-        author: "Your Name",
+        author: "Muhammad Khuhro",
         date: "2024-01-15",
         category: "Web Development",
         tags: ["HTML", "CSS", "JavaScript", "Beginner"],
@@ -116,7 +125,7 @@ Optimize images, minimize CSS and JavaScript, and use modern formats like WebP.
 ## Conclusion
 
 Responsive design is about creating great experiences for all users, regardless of their device.`,
-        author: "Your Name",
+        author: "Muhammad Khuhro",
         date: "2024-01-10",
         category: "Design",
         tags: ["CSS", "Responsive Design", "Mobile"],
@@ -161,7 +170,7 @@ Use proper heading hierarchy (H1, H2, H3) to structure your content.
 ## Conclusion
 
 SEO is a long-term strategy. Focus on creating great content and following best practices consistently.`,
-        author: "Your Name",
+        author: "Muhammad Khuhro",
         date: "2024-01-05",
         category: "SEO",
         tags: ["SEO", "Marketing", "Content"],
@@ -218,7 +227,7 @@ async function fetchData() {
 ## Conclusion
 
 These features make JavaScript more powerful and easier to work with. Start using them in your projects!`,
-        author: "Your Name",
+        author: "Muhammad Khuhro",
         date: "2024-01-01",
         category: "JavaScript",
         tags: ["JavaScript", "ES6", "Programming"],
@@ -256,7 +265,7 @@ You can use both together! Use Grid for the overall layout and Flexbox for compo
 ## Conclusion
 
 Understanding both tools gives you maximum flexibility in creating layouts.`,
-        author: "Your Name",
+        author: "Muhammad Khuhro",
         date: "2023-12-28",
         category: "CSS",
         tags: ["CSS", "Grid", "Flexbox", "Layout"],
@@ -322,7 +331,7 @@ Use tools like Lighthouse and PageSpeed Insights to track performance.
 ## Conclusion
 
 Performance optimization is an ongoing process. Regularly audit and improve your site's speed.`,
-        author: "Your Name",
+        author: "Muhammad Khuhro",
         date: "2023-12-25",
         category: "Performance",
         tags: ["Performance", "Optimization", "Web Development"],

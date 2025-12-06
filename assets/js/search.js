@@ -90,7 +90,7 @@ function resetSearch() {
     postsContainer.innerHTML = allPosts.map(post => createPostCard(post)).join('');
     
     // Reset page title
-    document.title = `${BLOG_CONFIG.name} - Modern Tech Blog`;
+    document.title = `${BLOG_CONFIG.name} - Tech Blog & Tutorials`;
 }
 
 // Reuse the createPostCard function from main.js

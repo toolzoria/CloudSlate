@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     loadPosts();
     loadCategories();
+    loadVision();
     setupNewsletter();
     setupMobileMenu();
     
@@ -128,6 +129,22 @@ function setupMobileMenu() {
             menu.classList.toggle('hidden');
         });
     }
+}
+
+// Load vision statement
+function loadVision() {
+    const visionContainer = document.getElementById('vision-content');
+    if (!visionContainer || !BLOG_CONFIG.vision) return;
+    
+    // Format vision as paragraphs
+    const paragraphs = BLOG_CONFIG.vision.split('. ').filter(p => p.trim().length > 0);
+    visionContainer.innerHTML = paragraphs.map(p => {
+        const trimmed = p.trim();
+        if (!trimmed.endsWith('.')) {
+            return `<p>${trimmed}.</p>`;
+        }
+        return `<p>${trimmed}</p>`;
+    }).join('');
 }
 
 // Format date

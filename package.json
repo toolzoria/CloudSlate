@@ -1,18 +1,23 @@
 {
-  "name": "modern-static-blog",
+  "name": "cloudslate-blog",
   "version": "1.0.0",
-  "description": "A modern, fast, and SEO-optimized static blog website",
+  "description": "CloudSlate - A modern, fast, and SEO-optimized tech blog",
   "scripts": {
     "build": "echo 'No build step required - static site ready to deploy'",
     "deploy": "wrangler pages deploy ."
   },
   "keywords": [
+    "cloudslate",
     "blog",
+    "tech",
+    "tutorials",
+    "cloud computing",
+    "web development",
     "static",
     "seo",
     "cloudflare-pages"
   ],
-  "author": "Your Name",
+  "author": "Muhammad Khuhro <info.cloudslate@gmail.com>",
   "license": "MIT",
   "devDependencies": {},
   "dependencies": {}
