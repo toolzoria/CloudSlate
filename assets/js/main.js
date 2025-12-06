@@ -1,13 +1,21 @@
 // Main JavaScript for homepage
 document.addEventListener('DOMContentLoaded', function() {
-    loadPosts();
-    loadCategories();
-    loadVision();
-    setupNewsletter();
+    // Only load these on homepage
+    if (document.getElementById('posts-container')) {
+        loadPosts();
+        loadCategories();
+        setupNewsletter();
+    }
+    
+    // Load vision only if vision container exists (about page)
+    if (document.getElementById('vision-content')) {
+        loadVision();
+    }
+    
     setupMobileMenu();
     
     // Initialize AdSense if enabled
-    if (BLOG_CONFIG.adsense.enabled) {
+    if (BLOG_CONFIG.adsense && BLOG_CONFIG.adsense.enabled) {
         loadAdSense();
     }
 });
