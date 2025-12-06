@@ -98,11 +98,11 @@
     <!-- Hero Section -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">Welcome to CloudSlate</h1>
-            <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-6">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 fade-in">Welcome to CloudSlate</h1>
+            <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-6 fade-in" style="animation-delay: 0.2s;">
                 Empowering developers and tech enthusiasts with cutting-edge insights, practical tutorials, and innovative solutions in cloud computing, web development, and modern technology.
             </p>
-            <div class="flex flex-wrap justify-center gap-4 mt-6">
+            <div class="flex flex-wrap justify-center gap-4 mt-6 hero-buttons">
                 <a href="mailto:info.cloudslate@gmail.com" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
                     📧 Contact Us
                 </a>
@@ -115,8 +115,8 @@
 
     <!-- Featured Posts -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h2 class="text-3xl font-bold mb-6">Featured Posts</h2>
-        <div id="featured-posts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <h2 class="text-3xl font-bold mb-6 fade-in">Featured Posts</h2>
+        <div id="featured-posts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
             <!-- Featured posts will be loaded here -->
         </div>
     </section>
@@ -134,8 +134,8 @@
 
     <!-- All Posts -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h2 class="text-3xl font-bold mb-6">All Posts</h2>
-        <div id="posts-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <h2 class="text-3xl font-bold mb-6 fade-in">All Posts</h2>
+        <div id="posts-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
             <!-- Posts will be loaded here -->
         </div>
     </section>
@@ -219,6 +219,7 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/search.js"></script>
+    <script src="assets/js/animations.js"></script>
 </body>
 </html>
 
