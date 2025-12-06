@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A modern, fast, and SEO-optimized blog covering technology, tutorials, and insights.">
+    <meta name="keywords" content="blog, technology, tutorials, web development, programming">
+    <meta name="author" content="Your Name">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourblog.com/">
+    <meta property="og:title" content="Your Blog Name - Modern Tech Blog">
+    <meta property="og:description" content="A modern, fast, and SEO-optimized blog covering technology, tutorials, and insights.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourblog.com/">
+    <meta property="twitter:title" content="Your Blog Name - Modern Tech Blog">
+    <meta property="twitter:description" content="A modern, fast, and SEO-optimized blog covering technology, tutorials, and insights.">
+    
+    <title>Your Blog Name - Modern Tech Blog</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Your Blog Name",
+        "description": "A modern, fast, and SEO-optimized blog",
+        "url": "https://yourblog.com"
+    }
+    </script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-gray-900 dark:text-white">BlogName</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Home</a>
+                    <a href="#categories" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Categories</a>
+                    <a href="#about" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">About</a>
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700">
+                        <span id="theme-icon">🌙</span>
+                    </button>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block py-2 text-gray-700 dark:text-gray-300">Home</a>
+                <a href="#categories" class="block py-2 text-gray-700 dark:text-gray-300">Categories</a>
+                <a href="#about" class="block py-2 text-gray-700 dark:text-gray-300">About</a>
+                <button id="theme-toggle-mobile" class="w-full text-left py-2 text-gray-700 dark:text-gray-300">
+                    Toggle Theme
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div class="max-w-2xl mx-auto">
+            <input type="text" id="search-input" placeholder="Search posts..." 
+                   class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Welcome to My Blog</h1>
+            <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                Discover the latest insights, tutorials, and stories about technology and beyond.
+            </p>
+        </div>
+    </section>
+
+    <!-- Featured Posts -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <h2 class="text-3xl font-bold mb-6">Featured Posts</h2>
+        <div id="featured-posts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Featured posts will be loaded here -->
+        </div>
+    </section>
+
+    <!-- AdSense Placeholder -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-8 text-center">
+            <p class="text-gray-600 dark:text-gray-400 mb-4">Advertisement</p>
+            <div id="adsense-top" class="min-h-[100px] flex items-center justify-center">
+                <!-- Google AdSense code will go here -->
+                <p class="text-sm text-gray-500">AdSense Ad Unit</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Posts -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <h2 class="text-3xl font-bold mb-6">All Posts</h2>
+        <div id="posts-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Posts will be loaded here -->
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section id="categories" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h2 class="text-3xl font-bold mb-6">Categories</h2>
+        <div id="categories-container" class="flex flex-wrap gap-3">
+            <!-- Categories will be loaded here -->
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg p-8 text-center text-white">
+            <h2 class="text-3xl font-bold mb-4">Subscribe to Newsletter</h2>
+            <p class="mb-6 text-blue-100">Get the latest posts delivered to your inbox</p>
+            <form id="newsletter-form" class="max-w-md mx-auto">
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <input type="email" id="newsletter-email" placeholder="Enter your email" required
+                           class="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white">
+                    <button type="submit" class="px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition">
+                        Subscribe
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-800 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4">About</h3>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        A modern blog platform focused on delivering quality content about technology and beyond.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                        <li><a href="index.html" class="hover:text-gray-900 dark:hover:text-white">Home</a></li>
+                        <li><a href="#categories" class="hover:text-gray-900 dark:hover:text-white">Categories</a></li>
+                        <li><a href="#about" class="hover:text-gray-900 dark:hover:text-white">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Connect</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">Twitter</a>
+                        <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">GitHub</a>
+                        <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-300 dark:border-gray-700 text-center text-gray-600 dark:text-gray-400">
+                <p>&copy; 2024 Your Blog Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="config.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/search.js"></script>
+</body>
+</html>
+
