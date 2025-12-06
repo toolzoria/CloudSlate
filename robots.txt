@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cloudslate.com/sitemap.xml
+Sitemap: https://cloudslate.pages.dev/sitemap.xml
 
